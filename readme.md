@@ -63,7 +63,7 @@
 
 **homebrew** (recommended for OSX users)
 
-    % brew install nodejs-install
+    % brew install https://raw.githubusercontent.com/wilmoore/nodejs-install/master/share/homebrew/nodejs-install.rb
 
 **source** (for non-OSX users or those that prefer not to use `homebrew`):
 
