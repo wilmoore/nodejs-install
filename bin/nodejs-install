@@ -16,6 +16,14 @@ set -o nounset
 declare NAME=`basename $0`
 
 #
+# colors.
+#
+
+declare COLOR_NORMAL=`tput sgr0`
+declare COLOR_REVERSE=`tput smso`
+declare COLOR_ERROR="\e[0;31m"
+
+#
 # infer operating system id.
 #
 
@@ -128,7 +136,7 @@ while [ $# -gt 0 ]; do
 
     # unknown option.
 
-    echo "$NAME: $1: unrecognized option" >&2
+    printf "$COLOR_ERROR%s: %s: unrecognized option$COLOR_NORMAL" $NAME $1 >&2
     echo ""
     usage
     exit 1
@@ -140,7 +148,7 @@ while [ $# -gt 0 ]; do
     # installation path setup.
 
     declare NODEJS_VERSION=$(echo $1 | tr -d 'vV')
-    declare PREFIX=$2
+    declare PREFIX=${2:-""}
     declare TARGET="$PREFIX/node-v$NODEJS_VERSION"
     declare BINDIR="$TARGET/bin"
     break
@@ -155,8 +163,12 @@ done
 # validate version.
 #
 
-if [[ `is_available $NODEJS_VERSION` -gt 0 ]]; then
-  echo "NodeJS version $NODEJS_VERSION is not available...aborting!"
+if [[ `is_available $NODEJS_VERSION` != '0' ]]; then
+  printf "${COLOR_ERROR}NodeJS version %s is not available...aborting!${COLOR_NORMAL}" $NODEJS_VERSION >&2
+  echo ""
+  echo ""
+  echo "Hint:"
+  echo "> $0 --list"
   exit 1
 fi
 
@@ -165,7 +177,8 @@ fi
 #
 
 if [[ -z $PREFIX ]]; then
-  echo "An installation prefix directory is required...aborting!"
+  printf "${COLOR_ERROR}An installation prefix directory is required...aborting!${COLOR_NORMAL}" >&2
+  echo ""
   usage
   exit 1
 fi
@@ -175,8 +188,7 @@ fi
 #
 
 if [[ -d $TARGET ]]; then
-  echo "'$TARGET' already exists...aborting!"
-  usage
+  printf "${COLOR_ERROR}'%s' already exists...aborting!${COLOR_NORMAL}" $TARGET >&2
   exit 1
 fi
 
