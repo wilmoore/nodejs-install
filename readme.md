@@ -44,32 +44,32 @@
 
 ### Install a specific NodeJS version
 
-    % nodejs-install <version> $NODE_VERSIONS
+    nodejs-install <version> $NODE_VERSIONS
 
 ### List all available NodeJS versions
 
-    % nodejs-install --list
+    nodejs-install --list
 
 ### List installed NodeJS version(s)
 
-    % ls $NODE_VERSIONS
+    ls $NODE_VERSIONS
 
 ### Show currently active NodeJS version
 
-    % node --version
+    node --version
 
 
 ## Install
 
 **homebrew** (recommended for OSX users)
 
-    % brew install https://raw.githubusercontent.com/wilmoore/nodejs-install/master/share/homebrew/nodejs-install.rb
+    brew install https://raw.githubusercontent.com/wilmoore/nodejs-install/master/share/homebrew/nodejs-install.rb
 
 **source** (for non-OSX users or those that prefer not to use `homebrew`):
 
-    % git clone https://github.com/wilmoore/nodejs-install.git
-    % cd nodejs-install
-    % make install # you can also set `PREFIX=` to install into a prefix of your choice instead of the default `/usr/local`
+    git clone https://github.com/wilmoore/nodejs-install.git
+    cd nodejs-install
+    make install # you can also set `PREFIX=` to install into a prefix of your choice instead of the default `/usr/local`
 
 
 ## Setup
@@ -94,10 +94,10 @@
 2. Enter one of the following commands listed below to remove associated files.
 
         # Homebrew (recommended)
-        % brew remove --force nodejs-install
+        brew remove --force nodejs-install
 
         # non-Homebrew
-        % rm -rf $PREFIX/nodejs-install
+        rm -rf $PREFIX/nodejs-install
 
 
 ## Having Issues?
