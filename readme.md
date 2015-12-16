@@ -82,10 +82,7 @@
 
 ## Integration with [direnv][direnv]
 
-###### .envrc
-
-    PATH_add "$NODE_VERSIONS/node-v<version>/bin"
-
+> More info on the direnv [wiki](https://github.com/direnv/direnv/wiki/Node).
 
 ## Deactivate / Uninstall
 
@@ -102,7 +99,9 @@
 
 ## Having Issues?
 
-1. Copy the following script into your terminal. This will copy the debug output to your clipboard (`pbcopy` works on Mac OSX; switch to your OS equivalent if necessary)
+0. Paste the following script into your terminal. This will copy the debug output to your clipboard (`pbcopy` works on Mac OSX; switch to your OS equivalent if necessary)
+0. Paste the contents of your clipboard into a [gist].
+0. File an [issue](https://github.com/wilmoore/nodejs-install/issues?state=open) and include the link to the [gist].
 
 ```sh
 pbcopy <<-EOF
@@ -128,9 +127,6 @@ pbcopy <<-EOF
 EOF
 ```
 
-2. File an [issue](https://github.com/wilmoore/nodejs-install/issues?state=open).
-
-
 ## Resources
 
 -   [direnv]
@@ -152,6 +148,7 @@ EOF
 [30-second-install]: https://gist.github.com/isaacs/579814
 [direnv]: http://direnv.net
 [bash]: http://www.gnu.org/software/bash/
+[gist]: https://gist.github.com/
 [nave]: https://github.com/isaacs/nave
 [nvm]: https://github.com/creationix/nvm
 [avn]: https://github.com/wbyoung/avn
