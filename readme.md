@@ -137,7 +137,7 @@ EOF
 -   [n]
 -   [nvm]
 -   [nave]
-
+-   [node-build] / [nodenv]
 
 ## LICENSE
 
@@ -147,6 +147,8 @@ EOF
 
 [30-second-install]: https://gist.github.com/isaacs/579814
 [direnv]: http://direnv.net
+[node-build]: https://github.com/nodenv/node-build
+[nodenv]: https://github.com/nodenv/nodenv
 [bash]: http://www.gnu.org/software/bash/
 [gist]: https://gist.github.com/
 [nave]: https://github.com/isaacs/nave
