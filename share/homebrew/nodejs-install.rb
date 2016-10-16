@@ -1,8 +1,8 @@
 class NodejsInstall < Formula
   desc "Installs pre-compiled NodeJS binaries while avoiding sudo or chown"
   homepage "https://github.com/wilmoore/nodejs-install"
-  url "https://github.com/wilmoore/nodejs-install/archive/1.0.1.tar.gz"
-  sha256 "fe5a0d6e253ad6db148dbe8dc3e8f80f160818cb7daea33e32e4f417075eb42f"
+  url "https://github.com/wilmoore/nodejs-install/archive/1.1.0.tar.gz"
+  sha256 "e56b35786d7bb3dd9d7ab59e86bf5d7edff285ea54b09fc14c005f229436fd1b"
   head "https://github.com/wilmoore/nodejs-install.git"
 
   def install
